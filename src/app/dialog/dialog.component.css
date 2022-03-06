@@ -1,0 +1,14 @@
+.form-group{
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.Bold{
+    font-style: bold;
+    font-family: sans-serif;
+}
+
+.form-control{
+    width: 100%;
+}
