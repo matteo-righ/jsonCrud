@@ -30,6 +30,7 @@ export class DialogComponent implements OnInit {
 
     this.postHolders.postData(this.postForm.value).subscribe((result) => {
       console.log(result);
+      alert("Data added successfully");
     })
     console.log(this.postForm.value)
   }
