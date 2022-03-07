@@ -7,15 +7,20 @@ import { Observable } from 'rxjs';
 })
 export class JsonPLaceholderService {
 
+  url = "https://jsonplaceholder.typicode.com"
+
   constructor(private http: HttpClient) { }
 
-  getData(): Observable<any> {
-
-    const url = "https://jsonplaceholder.typicode.com/posts"
-
-    return this.http.get<any>(url)
+    getData(): Observable<any> {
+    return this.http.get<any>(this.url+"/albums")
 
   }
+
+  postData(dat: any){
+
+    return this.http.post(this.url+"/albums", dat)
+
+    }
 
  
 }

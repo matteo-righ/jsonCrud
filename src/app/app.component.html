@@ -1,20 +1,13 @@
 <p>
   <mat-toolbar>
    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
+    <mat-icon routerLink="/home" style="cursor: pointer;">home</mat-icon>
   </button>
-  <span>Welcome</span>
-  <span class="example-spacer"> </span>
- <button mat-raised-button color="warn" (click)="openDialog()">Add Data</button>
+  <span routerLink="/home" style="cursor: pointer;">Welcome</span>
+  <span routerLink="/home" style="cursor: pointer;" class="navmenu">HOME</span>
+  <span routerLink="/albums"  style="cursor: pointer;" class="navmenu">ALBUMS</span>
+  <span class="example-spacer"></span>
 </mat-toolbar>
 </p>
-<div class="container">
-  <button mat-raised-button (click)="getDataFromAPI()" color="primary">Get Data</button>
-  <button mat-raised-button  color="primary">Post Data</button>
-</div>
+<router-outlet></router-outlet>
 
-<ul *ngFor="let d of data">
-  <li>{{d.id}}</li>
-  <li>{{d.title}}</li>
-  <li>{{d.body}}</li>
-</ul>

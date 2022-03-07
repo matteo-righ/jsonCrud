@@ -1,31 +1,32 @@
 <h1 mat-dialog-title>Add Data Form</h1>
 <div mat-dialog-content>
    
-    <form class="form" #dataForm="ngForm" (ngSubmit)="postFormData(dataForm.value)">
+    <form [formGroup]="postForm">
         <div>
             <mat-form-field appearance="outline">
-                <mat-label>ID</mat-label>
-                <input ngModel matInput placeholder="ID" type="number" name="id">
+                <mat-label>userId</mat-label>
+                <input formControlName="userId" matInput placeholder="ID" type="number">
             </mat-form-field>
     
         </div>
     
         <div>
             <mat-form-field appearance="outline">
-                <mat-label>Title</mat-label>
-                <input ngModel matInput placeholder="Title" name="Title">
+                <mat-label>ID</mat-label>
+                <input  formControlName="id" matInput placeholder="Title">
             </mat-form-field>    
         </div>
     
         <div>
             <mat-form-field appearance="outline">
-                <mat-label>Body</mat-label>
-                <input ngModel matInput placeholder="Body" name="Body">
+                <mat-label>Title</mat-label>
+                <input  formControlName="title" matInput placeholder="Body">
             </mat-form-field>  
         </div>
 
         <div>
-            <button mat-raised-button color="primary">Post Data</button>
+            <button mat-raised-button color="primary" (click)="postData()">Post Data</button>
+            
         </div>
     </form>
 

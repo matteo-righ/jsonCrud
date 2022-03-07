@@ -3,5 +3,9 @@ mat-form-field{
 }
 
 .example-spacer{
-    width: 80%;
+    width: 50%;
+}
+
+.navmenu{
+    margin-left: auto;
 }
