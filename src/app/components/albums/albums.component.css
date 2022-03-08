@@ -1,0 +1,10 @@
+.data{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 98%; 
+}
+
+.data:hover{
+    background-color: #D4D4D4;
+}

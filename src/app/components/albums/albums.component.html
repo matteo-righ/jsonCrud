@@ -2,9 +2,10 @@
     <button mat-raised-button (click)="getDataFromAPI()" color="primary">Get Data</button>
     <button mat-raised-button color="warn" (click)="openDialog()">Add Data</button>
 </div>
-
-<ul *ngFor="let d of data">
-    <li>userID: {{d.userId}}</li>
-    <li>ID: {{d.id}}</li>
-    <li>Title: {{d.title}}</li>
-</ul>
+<div >
+    <ul *ngFor="let d of data" class="data">
+        <li>userID: {{d.userId}}</li>
+        <li>ID: {{d.id}}</li>
+        <li>Title: {{d.title}}</li>
+    </ul>
+</div>
